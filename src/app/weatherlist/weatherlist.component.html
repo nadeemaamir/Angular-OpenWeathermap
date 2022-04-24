@@ -1,0 +1,20 @@
+<div class="row mt-2">
+  <div class="col-md-6">
+    <button type="button" class="btn btn-success btn-lg" (click)="GetCityWeather()">Refresh Weather</button>
+  </div>
+  <div class="row ">
+    <div class="col-md-3" *ngFor="let weather of weather">
+      <div id="weather_wrapper">
+        <div class="weatherCard">
+          <div class="currentTemp">
+            <img src={{weather.icon}} alt="" style="    margin-left: 5em;" />
+            <span class="temp">{{ weather.temp }}&#8451;</span>
+            <span class="location">{{ weather.name }}</span>
+            <span class="tempminmax">{{ weather.temp_min }}&#8451; / {{ weather.temp_max }}&#8451;</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
